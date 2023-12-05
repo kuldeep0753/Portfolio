@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* background-color: bisque; */
+}
+
+body {
+  padding: 10px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+.main-nav {
+  display: flex;
+}
+
+.author {
+  margin-right: auto;
+  font-size: 1.5rem;
+  color: blueviolet;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.gap {
+  margin-left: 10px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+
+  font-size: 1.125rem;
+
+  color: black;
+  font-weight: 600;
+}
+
+/* Main */
+.jumbotron {
+  display: flex;
+}
+
+.coder-image {
+  position: relative;
+  top: 90px;
+  right: 130px;
+}
+
+.git-info {
+  border: 2px solid #6e719c;
+  border-radius: 62px;
+  width: 94px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: blueviolet;
+}
+
+.git-link {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #000;
+  border-color: cadetblue;
+  padding: 5px;
+  width: max-content;
+  background-color: blueviolet;
+  position: relative;
+  bottom: 100px;
+  left: 50%;
+}
+
+.git-image {
+  width: 32px;
+  border-radius: 20px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: Ubuntu, sans-serif;
+  letter-spacing: 0.4px;
+  line-height: 27px;
+}
+/* Footer */
+footer {
+  background: aliceblue;
+  box-shadow: 0px 10px 21px blueviolet inset;
+margin-top: 20px;
+}
+
+footer > div {
+  position: relative;
+  left: 50%;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  display: flex;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  padding-left: 30px;
+}
+
+.text-detail {
+}
