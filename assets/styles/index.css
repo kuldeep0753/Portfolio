@@ -5,17 +5,69 @@
   box-sizing: border-box;
 }
 
+.wave-hand-emoji {
+  animation: wave-hand 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.beat {
+  width: 24px;
+  color: #e53e3e;
+  animation: heartbeat 1.3s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 body {
-  padding: 10px;
-  margin: 10px;
- 
-    overflow-x: hidden;
-  
+  padding: 2px;
+  margin: 2px;
+
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #06aed5;
 }
 
 .main-nav {
@@ -61,25 +113,37 @@ a {
 }
 
 .git-info {
-  border: 2px solid #6e719c;
+  transition: 0.3s ease;
+  border: 1px solid blueviolet;
   border-radius: 62px;
-  width: 125px;
-  padding: 20px;
-  margin-bottom: 20px;
+  width: 186px;
+  padding: 3px 0 9px 30px;
+  margin-top: 35px;
+}
+
+.git-info:hover {
+  cursor: pointer;
   background: blueviolet;
 }
 
 .git-link {
   display: block;
   border-radius: 5px;
-  border: 1px solid #000;
-  border-color: cadetblue;
+  border: 1px solid blueviolet;
   padding: 5px;
   width: max-content;
-  background-color: blueviolet;
+  transition: 0.3s ease;
   position: relative;
   bottom: 100px;
   left: 50%;
+}
+
+.git-link:hover {
+  cursor: pointer;
+  background: blueviolet;
+}
+.git-link > a {
+  color: black;
 }
 
 .git-image {
@@ -98,15 +162,15 @@ p {
 footer {
   background: aliceblue;
   box-shadow: 0px 10px 21px blueviolet inset;
-/* margin-top: 20px; */
-position: fixed;
+  margin-top: 20px;
+  position: fixed;
     bottom: 0;
-    width: 100%;
+  width: 100%;
 }
 
 footer > div {
   position: relative;
-  left: 50%;
+  left: 37%;
   margin-bottom: 10px;
 }
 
@@ -116,42 +180,38 @@ footer > div {
 
 .contact-details {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100px;
-  padding-left: 30px;
+  padding-left: 95px;
+  gap: 10px;
 }
 
 .text-detail {
+      margin-top: 20px;
 }
-/* 
-h1,p{
-  margin: 0;
-} */
 
 
 /* Media Queries for mobile view */
 @media only screen and (max-width: 768px) {
-
   body {
     padding: 10px;
     margin: 10px;
   }
-  
 
   .main-nav {
     display: flex;
   }
-  
+
   .author {
     margin-right: auto;
     font-size: 1.5rem;
     color: blueviolet;
   }
-  
+
   .nav-bar {
     display: flex;
   }
-  
+
   .gap {
     margin-left: 10px;
     padding-top: 0.25rem;
@@ -162,16 +222,16 @@ h1,p{
     padding-bottom: 0.25rem;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-  
+
     font-size: 1.125rem;
-  
+
     color: black;
     font-weight: 600;
   }
 
-  .links{
+  .links {
     position: fixed;
-    top: 580px;
+    top: 451px;
     right: 0px;
     /* border: 2px solid black; */
     padding: 23px;
@@ -180,31 +240,28 @@ h1,p{
     max-width: 100%;
     display: flex;
     justify-content: space-around;
-}
-  
-  
+  }
+
   /* Main */
   .jumbotron {
     display: flex;
     flex-direction: column;
     font-size: 12px;
   }
-  
+
   .coder-image {
     position: relative;
     top: 21px;
-    left: 32px; 
+    left: 32px;
   }
-  .coder-image>img {
+  .coder-image > img {
     height: 256px;
-    
   }
 
-  .text-detail{
+  .text-detail {
     margin-bottom: 60px;
-
   }
-  
+
   .git-info {
     /* border: 2px solid #6e719c;
     border-radius: 62px;
@@ -214,12 +271,11 @@ h1,p{
     background: blueviolet; */
     display: none;
   }
-  
+
   .git-link {
     display: none;
   }
-  
-  
+
   p {
     /* font-size: 18px;
     font-weight: 300;
@@ -227,7 +283,9 @@ h1,p{
     letter-spacing: 0.4px;
     line-height: 27px; */
   }
+
   /* Footer */
+
   footer {
     /* background: aliceblue;
     box-shadow: 0px 10px 21px blueviolet inset;
@@ -235,19 +293,19 @@ h1,p{
   position: fixed;
       bottom: 0;
       width: 100%; */
-      display: none;
+    display: none;
   }
-  
+
   footer > div {
     position: relative;
     left: 50%;
     margin-bottom: 10px;
   }
-  
+
   .copyright {
     display: flex;
   }
-  
+
   .contact-details {
     display: flex;
     justify-content: space-between;
