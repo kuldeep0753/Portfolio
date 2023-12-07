@@ -2,16 +2,22 @@
   padding: 0;
   margin: 0;
   /* background-color: bisque; */
+  box-sizing: border-box;
 }
 
 body {
   padding: 10px;
   margin: 10px;
+ 
+    overflow-x: hidden;
+  
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
+
 .main-nav {
   display: flex;
 }
@@ -51,13 +57,13 @@ a {
 .coder-image {
   position: relative;
   top: 90px;
-  right: 130px;
+  right: 16px;
 }
 
 .git-info {
   border: 2px solid #6e719c;
   border-radius: 62px;
-  width: 94px;
+  width: 125px;
   padding: 20px;
   margin-bottom: 20px;
   background: blueviolet;
@@ -92,7 +98,10 @@ p {
 footer {
   background: aliceblue;
   box-shadow: 0px 10px 21px blueviolet inset;
-margin-top: 20px;
+/* margin-top: 20px; */
+position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer > div {
@@ -113,4 +122,136 @@ footer > div {
 }
 
 .text-detail {
+}
+/* 
+h1,p{
+  margin: 0;
+} */
+
+
+/* Media Queries for mobile view */
+@media only screen and (max-width: 768px) {
+
+  body {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+
+  .main-nav {
+    display: flex;
+  }
+  
+  .author {
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: blueviolet;
+  }
+  
+  .nav-bar {
+    display: flex;
+  }
+  
+  .gap {
+    margin-left: 10px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  
+    font-size: 1.125rem;
+  
+    color: black;
+    font-weight: 600;
+  }
+
+  .links{
+    position: fixed;
+    top: 580px;
+    right: 0px;
+    /* border: 2px solid black; */
+    padding: 23px;
+    width: 100%;
+    background: blueviolet;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+  
+  
+  /* Main */
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  
+  .coder-image {
+    position: relative;
+    top: 21px;
+    left: 32px; 
+  }
+  .coder-image>img {
+    height: 256px;
+    
+  }
+
+  .text-detail{
+    margin-bottom: 60px;
+
+  }
+  
+  .git-info {
+    /* border: 2px solid #6e719c;
+    border-radius: 62px;
+    width: 94px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: blueviolet; */
+    display: none;
+  }
+  
+  .git-link {
+    display: none;
+  }
+  
+  
+  p {
+    /* font-size: 18px;
+    font-weight: 300;
+    font-family: Ubuntu, sans-serif;
+    letter-spacing: 0.4px;
+    line-height: 27px; */
+  }
+  /* Footer */
+  footer {
+    /* background: aliceblue;
+    box-shadow: 0px 10px 21px blueviolet inset;
+  margin-top: 20px;
+  position: fixed;
+      bottom: 0;
+      width: 100%; */
+      display: none;
+  }
+  
+  footer > div {
+    position: relative;
+    left: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    display: flex;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    padding-left: 30px;
+  }
 }
